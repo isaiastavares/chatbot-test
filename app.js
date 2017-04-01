@@ -19,7 +19,7 @@ var w_conversation = watson.conversation({
 var workspace = process.env.WORKSPACE_ID || 'workspaceId';
 
 app.get('/webhook/', function (req, res) {
-    if (req.query['hub.verify_token'] === 'paste FB token here') {
+    if (req.query['hub.verify_token'] === 'EAAQtZCzLOe0MBAMUJxcyiHYMiWxZCnWlLgpMttLrVg1ePpUusJyHoyOwB1wl3ZBnxPXMLAgzLlZCnGT074Phbvkk4HLLQWQ1vlb9vUG8ZBoIBtOXYITVMLBXReDFN3D1xGLyHg0XA2FERdkcIVZCTWwq5IZAZAZAMoVWZC3UFZAfy8clQZDZD') {
         res.send(req.query['hub.challenge']);
     }
     res.send('Erro de validação no token.');
@@ -107,7 +107,7 @@ function sendMessage(sender, text_) {
     });
 };
 
-var token = "paste FB token here";
+var token = "EAAQtZCzLOe0MBAMUJxcyiHYMiWxZCnWlLgpMttLrVg1ePpUusJyHoyOwB1wl3ZBnxPXMLAgzLlZCnGT074Phbvkk4HLLQWQ1vlb9vUG8ZBoIBtOXYITVMLBXReDFN3D1xGLyHg0XA2FERdkcIVZCTWwq5IZAZAZAMoVWZC3UFZAfy8clQZDZD";
 var host = (process.env.VCAP_APP_HOST || 'localhost');
 var port = (process.env.VCAP_APP_PORT || 3000);
 app.listen(port, host);
